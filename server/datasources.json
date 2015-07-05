@@ -1,1 +1,15 @@
-{"db":{"name":"db","connector":"memory"}}
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongoDs": {
+    "host": "ds029317.mongolab.com",
+    "port": 29317,
+    "database": "rackmongodb",
+    "username": "rackmongodbuser",
+    "password": "rackmongodbpass",
+    "name": "mongoDs",
+    "connector": "mongodb"
+  }
+}

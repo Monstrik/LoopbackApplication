@@ -36,10 +36,10 @@ boot(app, __dirname, function (err) {
         
         console.log(zmqsocket.identity + 'connected!');
         zmqsocket.on('message', function (data) {
-            console.log(zmqsocket.identity + ': received data ' + data.toString());
+            console.log(zmqsocket.identity + ': received:' + data.toString());
             app.io.emit('live status', data.toString());
         });
-    }
+    };
     
 
     runZmqSubscriber();

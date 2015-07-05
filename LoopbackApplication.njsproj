@@ -19,6 +19,9 @@
     <Content Include=".yo-rc.json" />
     <Content Include="client\admin.html" />
     <Content Include="client\livestatus.html" />
+    <Content Include="common\models\coffee-shop.json" />
+    <Content Include="common\models\review.json" />
+    <Content Include="common\models\reviewer.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="client\chat.html" />
@@ -28,6 +31,13 @@
     <Content Include="server\datasources.json" />
     <Content Include="server\middleware.json" />
     <Content Include="server\model-config.json" />
+    <Compile Include="common\models\coffee-shop.js" />
+    <Compile Include="common\models\review.js" />
+    <Compile Include="common\models\reviewer.js" />
+    <Compile Include="server\boot\create-sample-models.js" />
+    <Compile Include="server\boot\my-setup.js" />
+    <Compile Include="server\boot\routes.js" />
+    <Compile Include="server\boot\zmqServerStart.js" />
     <Compile Include="zmqserverandclients-test.js" />
     <Compile Include="zmqserver.js" />
     <Compile Include="server\server.js" />
@@ -38,8 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client" />
+    <Folder Include="common\" />
+    <Folder Include="common\models\" />
+    <Folder Include="lib\" />
     <Folder Include="server" />
     <Folder Include="server\boot" />
+    <Folder Include="test\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->

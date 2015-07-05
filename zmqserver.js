@@ -1,6 +1,6 @@
 
-var zmq = require('zmq')
-  , port = 'tcp://127.0.0.1:12345';
+var zmq = require('zmq');
+var port = 'tcp://127.0.0.1:12345';
 
 //publisher = send only
 
@@ -15,8 +15,8 @@ socket.bind(port, function (err) {
     console.log('bound!');
     
     setInterval(function () {
-        var symbol = stocks[Math.floor(Math.random() * stocks.length)]
-              , value = Math.random() * 1000;
+        var symbol = stocks[Math.floor(Math.random() * stocks.length)];
+        var value = Math.random() * 1000;
         
         console.log(socket.identity + ': sent ' + symbol + ' ' + value);
         socket.send(symbol + ' ' + value);
