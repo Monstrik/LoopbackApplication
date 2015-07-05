@@ -26,17 +26,17 @@ boot(app, __dirname, function (err) {
         var zmq = require('zmq');
         var port = 'tcp://127.0.0.1:12345';
         
-        var socket = zmq.socket('sub');
+        var zmqsocket = zmq.socket('sub');
         
-        socket.identity = 'zmq-subscriber' + process.pid;
-        socket.connect(port);
-        socket.subscribe('AAPL');
-        socket.subscribe('GOOG');
-        socket.subscribe('MSFT');
+        zmqsocket.identity = 'zmq-subscriber' + process.pid;
+        zmqsocket.connect(port);
+        zmqsocket.subscribe('AAPL');
+        zmqsocket.subscribe('GOOG');
+        zmqsocket.subscribe('MSFT');
         
-        console.log(socket.identity + 'connected!');
-        socket.on('message', function (data) {
-            console.log(socket.identity + ': received data ' + data.toString());
+        console.log(zmqsocket.identity + 'connected!');
+        zmqsocket.on('message', function (data) {
+            console.log(zmqsocket.identity + ': received data ' + data.toString());
             app.io.emit('live status', data.toString());
         });
     }
@@ -55,6 +55,13 @@ boot(app, __dirname, function (err) {
                 console.log('Got message: ' + msg);
                 app.io.emit('chat message', msg);
             });
+            
+            socket.on('set value', function (msg) {
+                console.log('Got set value message: ' + msg);
+                app.io.emit('set value', msg);
+            });
+            
+            
 
             socket.on('disconnect', function () {
                 console.log('user disconnected');

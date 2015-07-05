@@ -17,6 +17,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Content Include=".yo-rc.json" />
+    <Content Include="client\admin.html" />
     <Content Include="client\livestatus.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
