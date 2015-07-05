@@ -39,7 +39,6 @@
     <Compile Include="server\boot\routes.js" />
     <Compile Include="server\boot\zmqServerStart.js" />
     <Compile Include="zmqserverandclients-test.js" />
-    <Compile Include="zmqserver.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\boot\authentication.js" />
     <Compile Include="server\boot\explorer.js" />
