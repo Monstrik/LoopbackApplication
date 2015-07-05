@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Socket.IO chat</title>
+    <style>
+        #messages {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+            #messages li {
+                padding: 5px 10px;
+            }
+
+                #messages li:nth-child(odd) {
+                    background: #eee;
+                }
+    </style>
+</head>
+<body>
+    <ul id="status"></ul>
+    
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        var socket = io();
+        socket.on('live status', function (msg) {
+            if ($('#status li').length >= 10)
+                $('#status li').first().remove(); //$('#status').empty();
+            $('#status').append($('<li>').text(msg));
+        });
+    </script>
+</body>
+</html>

@@ -32,10 +32,12 @@ boot(app, __dirname, function (err) {
         socket.connect(port);
         socket.subscribe('AAPL');
         socket.subscribe('GOOG');
+        socket.subscribe('MSFT');
+        
         console.log(socket.identity + 'connected!');
         socket.on('message', function (data) {
             console.log(socket.identity + ': received data ' + data.toString());
-            app.io.emit('chat message', data.toString());
+            app.io.emit('live status', data.toString());
         });
     }
     
