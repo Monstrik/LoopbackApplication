@@ -19,17 +19,38 @@ boot(app, __dirname, function (err) {
     //// start the server if `$ node server.js`
     //if (require.main === module)
     //  app.start();
+    
+    
+    var runZmqSubscriber = function () {
+        
+        var zmq = require('zmq');
+        var port = 'tcp://127.0.0.1:12345';
+        
+        var socket = zmq.socket('sub');
+        
+        socket.identity = 'zmq-subscriber' + process.pid;
+        socket.connect(port);
+        socket.subscribe('AAPL');
+        socket.subscribe('GOOG');
+        console.log(socket.identity + 'connected!');
+        socket.on('message', function (data) {
+            console.log(socket.identity + ': received data ' + data.toString());
+            app.io.emit('chat message', data.toString());
+        });
+    }
+    
 
+    runZmqSubscriber();
 
     if (require.main === module) {
         //app.start();
         app.io = require('socket.io')(app.start());
 
         app.io.on('connection', function (socket) {
-            console.log('a user connected');
+            console.log('A web user connected');
 
             socket.on('chat message', function (msg) {
-                console.log('message: ' + msg);
+                console.log('Got message: ' + msg);
                 app.io.emit('chat message', msg);
             });
 
@@ -41,3 +62,5 @@ boot(app, __dirname, function (err) {
     }
 
 });
+
+
