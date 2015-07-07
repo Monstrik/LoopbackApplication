@@ -1,0 +1,25 @@
+{
+  "ids": {
+    "Variables": 1543
+  },
+  "models": {
+    "Variables": {
+      "power_source": "{\"key\":\"power_source\",\"value\":\"LINE_VOLTAGE\"}",
+      "input_volts": "{\"key\":\"input_volts\",\"value\":\"220\"}",
+      "output_volts": "{\"key\":\"output_volts\",\"value\":\"12\"}",
+      "input_frequency": "{\"key\":\"input_frequency\",\"value\":\"30\"}",
+      "output_frequency": "{\"key\":\"output_frequency\",\"value\":\"25\"}",
+      "battery_installation_date": "{\"key\":\"battery_installation_date\",\"value\":\"2012-04-23T00:00:0.0Z\"}",
+      "power_module_temperature": "{\"key\":\"power_module_temperature\",\"value\":\"32\"}",
+      "original_full_charge_capacity": "{\"key\":\"original_full_charge_capacity\",\"value\":\"99\"}",
+      "current_battery_capacity": "{\"key\":\"current_battery_capacity\",\"value\":\"47\"}",
+      "battery_health": "{\"key\":\"battery_health\",\"value\":\"99\"}",
+      "battery_cycles": "{\"key\":\"battery_cycles\",\"value\":\"34\"}",
+      "battery_voltage": "{\"key\":\"battery_voltage\",\"value\":\"12\"}",
+      "battery_watt_hours_remaining": "{\"key\":\"battery_watt_hours_remaining\",\"value\":\"12045\"}",
+      "battery_charge_percent": "{\"key\":\"battery_charge_percent\",\"value\":\"78\"}",
+      "battery_minutes_remaining": "{\"key\":\"battery_minutes_remaining\",\"value\":\"152\"}",
+      "last_plugged_time": "{\"key\":\"last_plugged_time\",\"value\":\"2012-04-23T18:25:43.511Z\"}"
+    }
+  }
+}

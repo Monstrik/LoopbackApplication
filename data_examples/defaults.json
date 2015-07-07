@@ -1,0 +1,71 @@
+{
+    "msgid" : 0,
+    "reply" : "get_all_variables",
+    "data" :
+    [
+        {
+            "key" : "power_source",
+            "value" : "LINE_VOLTAGE"
+        },
+        {
+            "key" : "input_volts",
+            "value" : "220"
+        },
+        {
+            "key" : "output_volts",
+            "value" : "12"
+        },
+        {
+            "key" : "input_frequency",
+            "value" : "30"
+        },
+        {
+            "key" : "output_frequency",
+            "value" : "25"
+        },
+        {
+            "key" : "battery_installation_date",
+            "value" : "2012-04-23T00:00:0.0Z"
+        },
+        {
+            "key" : "power_module_temperature",
+            "value" : "32"
+        },
+        {
+            "key" : "original_full_charge_capacity",
+            "value" : "99"
+        },
+        {
+            "key" : "current_battery_capacity",
+            "value" : "47"
+        },
+        {
+            "key" : "battery_health",
+            "value" : "99"
+        },
+        {
+            "key" : "battery_cycles",
+            "value" : "34"
+        },
+        {
+            "key" : "battery_voltage",
+            "value" : "12"
+        },
+        {
+            "key" : "battery_watt_hours_remaining",
+            "value" : "12045"
+        },
+        {
+            "key" : "battery_charge_percent",
+            "value" : "78"
+        },
+        {
+            "key" : "battery_minutes_remaining",
+            "value" : "152"
+        },
+        {
+            "key" : "last_plugged_time",
+            "value" : "2012-04-23T18:25:43.511Z"
+        }
+    ]
+}

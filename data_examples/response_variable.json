@@ -1,0 +1,11 @@
+{
+    "msgid" : 12345,
+    "reply" : "get_variable",
+    "data" :
+    [
+        {
+            "key" : "input_volts",
+            "value" : "240"
+        }
+    ]
+}

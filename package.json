@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint .",
+    "hint": "jshint .",
+    "cover": "istanbul cover test\\api_test.js",
     "test": "mocha --reporter nyan",
-    "test1": "mocha --timeout 5000 --reporter nyan $(TESTS)"
+    "test1": "mocha --timeout 5000 --reporter nyan",
+    "ci-test": "istanbul cover \"node_modules/mocha/bin/_mocha\" > test.tap && istanbul report clover"
   },
   "dependencies": {
     "compression": "^1.0.3",

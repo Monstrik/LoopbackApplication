@@ -1,27 +1,14 @@
 ﻿module.exports = function (app) {
-    console.log('zmqServerStart');
+    var Req = require('../../lib/zmq-driver-request');
+    var Notifications = require('../../lib/zmq-notify-client');
+    var NotificationsTest = require('../../lib/zmq-notify-test');
     
-    var zmq = require('zmq');
-    var port = 'tcp://127.0.0.1:12345';
+    //Run ZMQ requester
+    var r = new Req(app);
     
-    //publisher = send only
+    //Run ZMQ notification service
+    var ni = new Notifications(app);
     
-    var socket = zmq.socket('pub');
-    
-    socket.identity = 'zmq publisher' + process.pid;
-    
-    var stocks = ['AAPL', 'GOOG', 'YHOO', 'MSFT', 'INTC'];
-    
-    socket.bind(port, function (err) {
-        if (err) throw err;
-        console.log('bound!');
-        
-        setInterval(function () {
-            var symbol = stocks[Math.floor(Math.random() * stocks.length)];
-            var value = Math.random() * 1000;
-            
-            console.log(socket.identity + ': sent ' + symbol + ' ' + value);
-            socket.send(symbol + ' ' + value);
-        }, 5000);
-    });
+    var nit = new NotificationsTest(app);
+
 };

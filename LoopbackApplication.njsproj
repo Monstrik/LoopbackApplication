@@ -22,6 +22,12 @@
     <Content Include="common\models\coffee-shop.json" />
     <Content Include="common\models\review.json" />
     <Content Include="common\models\reviewer.json" />
+    <Content Include="common\models\variables.json" />
+    <Content Include="data_examples\defaults.json" />
+    <Content Include="data_examples\notification.json" />
+    <Content Include="data_examples\request.json" />
+    <Content Include="data_examples\response_variable.json" />
+    <Content Include="data_examples\variables_data.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="client\chat.html" />
@@ -34,21 +40,28 @@
     <Compile Include="common\models\coffee-shop.js" />
     <Compile Include="common\models\review.js" />
     <Compile Include="common\models\reviewer.js" />
+    <Compile Include="common\models\variables.js" />
     <Compile Include="server\boot\create-sample-models.js" />
     <Compile Include="server\boot\my-setup.js" />
     <Compile Include="server\boot\routes.js" />
+    <Compile Include="server\boot\zmqTestServerStart.js" />
     <Compile Include="server\boot\zmqServerStart.js" />
+    <Compile Include="lib\zmq-driver-request.js" />
+    <Compile Include="lib\zmq-notify-client.js" />
+    <Compile Include="lib\zmq-notify-test.js" />
     <Compile Include="zmqserverandclients-test.js" />
     <Compile Include="server\server.js" />
     <Compile Include="server\boot\authentication.js" />
     <Compile Include="server\boot\explorer.js" />
     <Compile Include="server\boot\rest-api.js" />
     <Compile Include="server\boot\root.js" />
+    <Content Include="server\request-all-variables.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="client" />
     <Folder Include="common\" />
     <Folder Include="common\models\" />
+    <Folder Include="data_examples\" />
     <Folder Include="lib\" />
     <Folder Include="server" />
     <Folder Include="server\boot" />
