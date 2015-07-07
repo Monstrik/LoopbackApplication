@@ -28,6 +28,7 @@
     <Content Include="data_examples\request.json" />
     <Content Include="data_examples\response_variable.json" />
     <Content Include="data_examples\variables_data.json" />
+    <Content Include="HipChatTest.txt" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="client\chat.html" />
